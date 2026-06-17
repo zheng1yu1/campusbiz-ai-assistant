@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>校园周边商家 AI 运营助手 - 产品验证方案</title>
+    <title>CampusBiz AI - 产品验证方案</title>
     <style>
       * {
         box-sizing: border-box;
@@ -145,36 +145,28 @@
       }
 
       .link-box {
-        display: grid;
-        grid-template-columns: 34mm 1fr;
-        gap: 12px;
-        align-items: center;
+        display: block;
         margin-top: 14px;
-        border: 1px dashed #94a3b8;
+        border: 1px solid #d8e0ea;
         border-radius: 8px;
         padding: 10px;
         background: #fbfcfe;
-      }
-
-      .qr {
-        display: grid;
-        width: 34mm;
-        height: 34mm;
-        place-items: center;
-        border: 1px solid #cbd5e1;
-        color: #64748b;
-        background: white;
-        font-size: 12px;
-        text-align: center;
       }
 
       .link-box h2 {
         margin-bottom: 6px;
       }
 
-      .link-line {
-        min-height: 24px;
-        border-bottom: 1px solid #94a3b8;
+      .demo-link {
+        display: inline;
+        min-height: 0;
+        border: 0;
+        padding: 0;
+        color: #0f766e;
+        background: transparent;
+        font-size: 12.2px;
+        font-weight: 700;
+        word-break: break-all;
       }
 
       @page {
@@ -206,8 +198,7 @@
 
         .meta,
         .grid,
-        ol,
-        .link-box {
+        ol {
           grid-template-columns: 1fr;
         }
       }
@@ -254,9 +245,8 @@
           padding: 8px;
         }
 
-        .qr {
-          width: 30mm;
-          height: 30mm;
+        .demo-link {
+          font-size: 10.8px;
         }
       }
     </style>
@@ -268,7 +258,7 @@
     </div>
 
     <main class="page">
-      <p class="topline">小满摘星计划 AI 顶尖人才实习项目 · MVP 验证方案</p>
+      <p class="topline">CampusBiz AI · MVP 验证方案</p>
       <h1>校园周边商家 AI 运营助手</h1>
       <p class="summary">
         目标是验证一个很小的 AI 工具：让校园周边小店把“本周活动”快速变成可发布的文案、短视频脚本和顾客回复话术。
@@ -335,12 +325,13 @@
       </div>
 
       <div class="link-box">
-        <div class="qr">二维码<br />占位</div>
-        <div>
-          <h2>项目二维码 / Demo 链接</h2>
-          <p>提交前可在这里填入线上 Demo 地址，或贴上二维码。</p>
-          <div class="link-line"></div>
-        </div>
+        <h2>可在线体验 Demo</h2>
+        <p>
+          Demo 地址：
+          <a class="demo-link" href="https://zheng1yu1.github.io/campusbiz-ai-assistant/">
+            https://zheng1yu1.github.io/campusbiz-ai-assistant/
+          </a>
+        </p>
       </div>
     </main>
   </body>
