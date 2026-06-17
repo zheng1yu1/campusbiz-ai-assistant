@@ -1,86 +1,106 @@
 # CampusBiz AI - 校园周边商家 AI 运营助手
 
-CampusBiz AI 是一个面向校园周边小微商家的轻量级 AI 运营 Demo。它模拟了一个简单的 AI 工作台：商家输入门店类型、活动内容、目标客群和发布平台后，系统生成可直接参考的活动文案、短视频脚本和顾客回复话术。
+## 项目简介
 
-项目重点不是做一个完整后台系统，而是验证一个具体问题：校园周边商家是否需要低成本、低门槛的内容运营辅助工具。
+CampusBiz AI 是一个面向校园周边小微商家的静态 AI 产品 MVP。它用 HTML、CSS 和原生 JavaScript 模拟一个 AI 运营工作台，帮助奶茶店、饭店、理发店、打印店、健身房、水果店等商家完成商家画像、活动策划、内容生成、平台分发建议、顾客评论回复和轻量复盘。
+
+产品闭环是：商家画像 → 活动目标 → AI 生成运营内容包 → 一周发布计划 → 顾客评论回复 → 效果复盘建议 → 下一轮活动优化。
 
 ## 在线体验
 
-- Demo 地址：https://zheng1yu1.github.io/campusbiz-ai-assistant/
-- 产品方案页：https://zheng1yu1.github.io/campusbiz-ai-assistant/product-plan.html
+- Demo：https://zheng1yu1.github.io/campusbiz-ai-assistant/
+- GitHub：https://github.com/zheng1yu1/campusbiz-ai-assistant
 
-## 项目背景
+## 产品定位
 
-校园周边的奶茶店、饭店、理发店、打印店等小店，经常需要做新品、套餐、限时优惠和节日活动。很多门店没有专职运营，老板或店员通常靠朋友圈、小红书、微信群和点评平台做宣传。
+CampusBiz AI 关注的是校园周边小店的日常运营问题：活动信息零散、文案临时写、平台风格不统一、重复咨询多。当前版本不追求完整商业系统，而是用可运行的静态原型验证工作流是否成立。
 
-这类场景里，真正耗时间的不是发布动作本身，而是把零散活动信息整理成自然、清楚、适合平台的表达。CampusBiz AI 试图用一个很小的 AI 产品原型，验证这个需求是否值得继续做下去。
+## 功能模块
 
-## 核心功能
+- 首页 AI 工作台：生成活动主题、朋友圈文案、小红书标题、短视频脚本、顾客回复和复盘建议。
+- 运营仪表盘：使用模拟数据展示本周运营台效果。
+- 一周运营日历：根据主推产品生成周一到周日计划。
+- 评论回复助手：生成好评、差评、活动咨询、价格咨询等回复建议。
+- 案例库：展示 6 个行业示例数据。
+- 用户验证：整理假设、实验路径、访谈问题和关键指标。
+- AI 工作流：展示 Prompt 编排思路和未来真实系统架构。
+- 定价方案：展示 19/49/99 元三档商业验证思路。
 
-- 输入门店类型、门店名称、目标客群、活动内容和输出风格。
-- 生成小红书标题、发布文案、短视频脚本、顾客回复话术和执行建议。
-- 支持一键填入示例，方便快速查看产品效果。
-- 支持复制生成内容，模拟真实运营使用流程。
-- 提供独立产品方案页，便于查看 MVP 验证思路。
+## 页面说明
+
+- `index.html`：产品官网与 AI 工作台 Demo。
+- `dashboard.html`：运营仪表盘。
+- `calendar.html`：一周运营日历。
+- `reply.html`：评论回复助手。
+- `cases.html`：行业案例库。
+- `research.html`：用户验证页面。
+- `workflow.html`：AI 工作流页面。
+- `pricing.html`：定价方案页面。
+- `faq.html`：常见问题。
+- `privacy.html`：隐私说明。
+- `404.html`：GitHub Pages 404 页面。
+- `product-plan.html`：一页 A4 产品验证方案。
 
 ## 技术栈
 
 - HTML
 - CSS
 - 原生 JavaScript
+- localStorage（仅用于浏览器本地历史记录）
 
-项目不依赖框架、不需要构建工具，也不需要安装 Node.js。
-
-## 页面说明
-
-- `index.html`：产品 Demo 主页面，包含首页定位、输入工作台和 AI 输出结果。
-- `product-plan.html`：产品验证方案页，控制为适合 A4 打印的一页内容。
-- `styles.css`：主页面样式和响应式布局。
-- `script.js`：表单交互、模拟 AI 输出、复制功能。
-- `README.md`：项目介绍和运行说明。
-
-## 本地运行
-
-直接双击 `index.html` 即可打开 Demo 页面。
-
-也可以双击 `product-plan.html` 查看产品方案页。整个项目都是静态文件，放在浏览器里即可运行。
-
-## GitHub Pages 部署方式
-
-1. 将项目上传到 GitHub 仓库：
-   `https://github.com/zheng1yu1/campusbiz-ai-assistant`
-2. 进入仓库 `Settings`。
-3. 打开 `Pages`。
-4. Source 选择 `Deploy from a branch`。
-5. Branch 选择 `main`，目录选择 `/root`。
-6. 保存后等待 GitHub Pages 自动生成访问地址。
-
-部署完成后，访问：
-
-- `https://zheng1yu1.github.io/campusbiz-ai-assistant/`
-- `https://zheng1yu1.github.io/campusbiz-ai-assistant/product-plan.html`
+项目不依赖 React、Vue、Node.js、后端、数据库或真实大模型 API。
 
 ## 项目结构
 
 ```text
 campusbiz-ai-assistant/
 ├── index.html
+├── dashboard.html
+├── calendar.html
+├── reply.html
+├── cases.html
+├── research.html
+├── workflow.html
+├── pricing.html
+├── faq.html
+├── privacy.html
+├── 404.html
 ├── product-plan.html
 ├── styles.css
 ├── script.js
 └── README.md
 ```
 
+## 本地运行
+
+直接双击 `index.html` 即可打开首页。也可以直接打开任意 HTML 页面。
+
+如果希望用本地静态服务预览，可以在项目目录运行任意静态服务器，但这不是必需步骤。
+
+## GitHub Pages 部署
+
+1. 将项目文件上传到仓库 `zheng1yu1/campusbiz-ai-assistant`。
+2. 进入仓库 `Settings` → `Pages`。
+3. Source 选择 `Deploy from a branch`。
+4. Branch 选择 `main`，目录选择 `/root`。
+5. 保存后等待 GitHub Pages 生成访问地址。
+
 ## MVP 边界
 
-当前版本只做前端静态 Demo，不接入真实大模型 API，不包含登录、数据库、后台管理和真实商家数据存储。
+当前版本是静态 MVP。所有生成内容由前端规则模拟，不代表真实大模型效果；页面中的案例、仪表盘和调研记录均为示例数据或模拟数据。当前版本不接入真实 API、不自动发布到第三方平台、不做真实效果归因。
 
-生成内容由前端规则模拟，用于展示产品流程和验证使用场景。后续如果继续推进，可以再接入真实模型、商家账号体系和内容历史记录。
+## 隐私说明
+
+当前版本不会上传用户输入到服务器。首页历史记录仅保存在浏览器 localStorage 中，用户可以随时清空。建议不要输入真实敏感经营数据。
 
 ## 后续规划
 
-- 接入真实 AI 模型，根据门店信息生成更稳定的内容。
-- 增加不同门店类型的 Prompt 模板。
-- 支持活动历史记录和常用回复库。
-- 增加多平台内容改写，例如小红书、朋友圈、抖音、点评平台。
-- 做一次真实商家试用，记录复制率、复用率和付费意愿。
+- 接入真实大模型 API。
+- 增加用户账号和店铺画像数据库。
+- 增加 RAG 场景模板库。
+- 增加内容效果反馈和复盘记录。
+- 增加多商家管理和第三方平台发布能力。
+
+## 版本说明
+
+v1.0：静态 AI 产品 MVP，覆盖内容生成、运营日历、评论回复、案例库、用户验证、AI 工作流、定价方案和产品方案页。

@@ -3,161 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CampusBiz AI - 校园周边商家 AI 运营助手</title>
+    <meta name="description" content="CampusBiz AI 是面向校园周边小微商家的静态 AI 产品 MVP，提供活动策划、内容生成、运营日历、评论回复和复盘建议。" />
+    <title>CampusBiz AI - 首页</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header">
-      <nav class="nav" aria-label="页面导航">
-        <a class="brand" href="#top" aria-label="回到首页">
-          <span class="brand-mark">AI</span>
-          <span>CampusBiz AI</span>
-        </a>
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>CampusBiz AI</span></a>
         <div class="nav-links">
-          <a href="#demo">产品 Demo</a>
-          <a href="product-plan.html">A4 验证方案</a>
+          <a href="index.html" data-page="home">首页</a>
+          <a href="dashboard.html" data-page="dashboard">仪表盘</a>
+          <a href="calendar.html" data-page="calendar">运营日历</a>
+          <a href="reply.html" data-page="reply">评论回复</a>
+          <a href="cases.html" data-page="cases">案例库</a>
+          <a href="research.html" data-page="research">用户验证</a>
+          <a href="workflow.html" data-page="workflow">AI 工作流</a>
+          <a href="pricing.html" data-page="pricing">定价方案</a>
+          <a href="product-plan.html" data-page="plan">产品方案</a>
+          <a href="faq.html" data-page="faq">常见问题</a>
+          <a href="privacy.html" data-page="privacy">隐私说明</a>
+          <a href="https://github.com/zheng1yu1/campusbiz-ai-assistant">GitHub</a>
         </div>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero section">
-        <div class="hero-copy">
-          <p class="eyebrow">CampusBiz AI · 校园小店运营内容工作台</p>
-          <h1>给校园周边小店的 AI 运营助手</h1>
-          <p class="subtitle">
-            面向奶茶店、饭店、理发店、打印店这类小微商家，解决“不会写内容、没时间更新、重复咨询太多”的问题，
-            把一次活动快速转成可发布的朋友圈、小红书标题、短视频脚本和顾客回复话术。
-          </p>
+    <main>
+      <section class="section page-hero">
+        <div class="hero-text">
+          <p class="eyebrow">静态 AI 产品 MVP</p>
+          <h1>CampusBiz AI 校园周边商家 AI 运营工作台</h1>
+          <p class="subtitle">为校园周边小微商家生成活动方案、平台文案、短视频脚本、顾客回复和一周运营计划。</p>
           <div class="hero-actions">
-            <button class="primary-btn" type="button" data-fill-demo>查看真实示例</button>
-            <a class="secondary-btn" href="product-plan.html">打印验证方案</a>
+            <a class="primary-btn" href="#demo">开始生成</a>
+            <a class="secondary-btn" href="workflow.html">查看 AI 工作流</a>
           </div>
         </div>
-
-        <aside class="position-card" aria-label="产品定位">
-          <div>
-            <span>目标用户</span>
-            <strong>校园周边缺少专职运营的小微商家</strong>
-            <p>老板或店长亲自发朋友圈、回私信、做活动宣传。</p>
-          </div>
-          <div>
-            <span>核心痛点</span>
-            <strong>有活动，但说不清、发不稳、回得慢</strong>
-            <p>内容经常临时写，平台表达不自然，重复问题占用大量时间。</p>
-          </div>
-          <div>
-            <span>AI 方案</span>
-            <strong>输入门店活动，一次生成多平台运营包</strong>
-            <p>先用前端 Demo 验证商家是否愿意复制使用，再决定是否接入真实模型。</p>
-          </div>
+        <aside class="hero-panel">
+          <h2>产品闭环</h2>
+          <p>商家画像 → 活动目标 → AI 生成运营内容包 → 一周发布计划 → 顾客评论回复 → 效果复盘建议 → 下一轮活动优化</p>
         </aside>
       </section>
 
-      <section id="demo" class="section demo-section" aria-labelledby="demo-title">
-        <div class="section-heading">
-          <p class="eyebrow">产品 Demo</p>
-          <h2 id="demo-title">像一个 AI 工作台，而不是普通表单</h2>
-          <p>
-            这版 Demo 模拟真实 AI 产品的交互：先填写门店背景和本次活动，再由系统生成结构化运营包，
-            方便商家直接复制、发布或转给店员执行。
-          </p>
-        </div>
-
-        <div class="workbench">
-          <form class="input-panel" id="generator-form">
-            <div class="panel-title">
-              <p class="eyebrow">输入 brief</p>
-              <h3>门店活动信息</h3>
-            </div>
-
-            <label>
-              门店类型
-              <select id="storeType" name="storeType">
-                <option>奶茶店</option>
-                <option>饭店</option>
-                <option>理发店</option>
-                <option>健身房</option>
-                <option>水果店</option>
-                <option>打印店</option>
-              </select>
-            </label>
-
-            <label>
-              门店名称
-              <input id="storeName" name="storeName" type="text" placeholder="例如：满杯日记" />
-            </label>
-
-            <label>
-              主要客群
-              <select id="audience" name="audience">
-                <option>大学生</option>
-                <option>考研学生</option>
-                <option>宿舍党</option>
-                <option>情侣</option>
-                <option>附近上班族</option>
-                <option>周边居民</option>
-              </select>
-            </label>
-
-            <label>
-              本次活动
-              <textarea id="campaign" name="campaign" rows="5" placeholder="例如：新品桂花乌龙第二杯半价，下午 2 点到 6 点可用"></textarea>
-            </label>
-
-            <div class="field-row">
-              <label>
-                主发平台
-                <select id="platform" name="platform">
-                  <option>小红书</option>
-                  <option>朋友圈</option>
-                  <option>抖音短视频</option>
-                  <option>美团/大众点评</option>
-                  <option>私信回复</option>
-                </select>
-              </label>
-
-              <label>
-                输出风格
-                <select id="tone" name="tone">
-                  <option>自然亲切</option>
-                  <option>清爽专业</option>
-                  <option>校园感强</option>
-                  <option>促销感强</option>
-                </select>
-              </label>
-            </div>
-
-            <div class="form-actions">
-              <button class="primary-btn" type="submit">生成运营包</button>
-              <button class="secondary-btn" type="button" data-fill-demo>填入示例</button>
-            </div>
-          </form>
-
-          <aside class="output-panel" aria-live="polite">
-            <div class="output-head">
-              <div>
-                <p class="eyebrow">AI 输出</p>
-                <h3>多平台运营包</h3>
-              </div>
-              <button class="copy-btn" type="button" data-copy-all>复制全部</button>
-            </div>
-
-            <div class="insight-strip" id="insight-strip">
-              <span>定位：校园半径 1 公里</span>
-              <span>目标：提升到店咨询</span>
-              <span>建议：先发小红书和朋友圈</span>
-            </div>
-
-            <div id="output" class="output-empty">
-              填写左侧信息后，系统会生成标题、发布文案、短视频脚本、顾客回复和执行建议。
-            </div>
-          </aside>
+      <section class="section">
+        <div class="card-grid">
+          <article class="card"><h3>商家画像识别</h3><p>根据店铺类型、客单价、客群和当前宣传方式，判断内容表达重点。</p></article>
+          <article class="card"><h3>活动方案生成</h3><p>围绕拉新、复购、推新品、清库存、提升评价等目标组织活动内容。</p></article>
+          <article class="card"><h3>多平台内容适配</h3><p>输出朋友圈、小红书、短视频和点评平台所需的不同表达形式。</p></article>
+          <article class="card"><h3>顾客回复与复盘建议</h3><p>生成评论回复话术，并给出下一轮活动的轻量复盘方向。</p></article>
         </div>
       </section>
 
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">运营闭环流程</p>
+          <h2>从活动信息到下一轮优化</h2>
+        </div>
+        <div class="flow">
+          <div class="flow-step"><strong>填写商家信息</strong><span>店铺类型、客单价、客群和宣传方式。</span></div>
+          <div class="flow-step"><strong>选择活动目标</strong><span>拉新、复购、推新品、清库存或提升评价。</span></div>
+          <div class="flow-step"><strong>生成运营内容包</strong><span>文案、标题、脚本、回复和风险提醒。</span></div>
+          <div class="flow-step"><strong>复制/导出</strong><span>复制、下载 TXT 或打印。</span></div>
+          <div class="flow-step"><strong>发布到平台</strong><span>根据平台建议安排发布时间。</span></div>
+          <div class="flow-step"><strong>收集反馈复盘</strong><span>记录顾客问题和内容表现，优化下一轮活动。</span></div>
+        </div>
+      </section>
+
+      <section id="demo" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">AI 工作台 Demo</p>
+          <h2>生成第一份运营内容包</h2>
+          <p class="muted">本页为静态 MVP，生成内容由前端规则模拟。示例内容会明确标注为示例数据。</p>
+        </div>
+        <div class="workbench">
+          <form class="input-panel" id="generator-form" novalidate>
+            <div class="notice" id="exampleFlag">可选择示例，也可以填写自己的模拟门店信息。</div>
+            <div id="formAlert" class="form-alert" role="alert"></div>
+            <div class="sample-tabs">
+              <button type="button" class="secondary-btn" data-example="tea">奶茶店新品第二杯半价</button>
+              <button type="button" class="secondary-btn" data-example="dinner">饭店周末双人套餐</button>
+              <button type="button" class="secondary-btn" data-example="print">打印店开学季优惠</button>
+            </div>
+            <div class="field-row">
+              <label for="storeType">店铺类型
+                <select id="storeType"><option>奶茶店</option><option>饭店</option><option>理发店</option><option>健身房</option><option>水果店</option><option>打印店</option><option>其他</option></select>
+              </label>
+              <label for="storeName">店铺名称
+                <input id="storeName" type="text" placeholder="例如：满杯日记" />
+              </label>
+            </div>
+            <div id="storeNameError" class="error-message"></div>
+            <div class="field-row">
+              <label for="priceRange">客单价区间
+                <select id="priceRange"><option>10 元以下</option><option>10-20 元</option><option>20-40 元</option><option>40 元以上</option></select>
+              </label>
+              <label for="audience">主要客群
+                <select id="audience"><option>大学生</option><option>上班族</option><option>情侣</option><option>宿舍党</option><option>考研学生</option><option>附近居民</option></select>
+              </label>
+            </div>
+            <div class="field-row">
+              <label for="channel">当前宣传方式
+                <select id="channel"><option>朋友圈</option><option>小红书</option><option>抖音</option><option>美团/大众点评</option><option>线下海报</option><option>几乎没有</option></select>
+              </label>
+              <label for="goal">活动目标
+                <select id="goal"><option>拉新</option><option>复购</option><option>推新品</option><option>清库存</option><option>提升评价</option><option>节日活动</option></select>
+              </label>
+            </div>
+            <label for="campaign">活动内容
+              <textarea id="campaign" placeholder="例如：新品桂花乌龙第二杯半价，下午 2 点到 6 点可用"></textarea>
+            </label>
+            <div id="campaignError" class="error-message"></div>
+            <label for="tone">语气风格
+              <select id="tone"><option>活泼</option><option>亲切</option><option>专业</option><option>搞笑</option><option>促销感强</option></select>
+            </label>
+            <div class="form-actions">
+              <button class="primary-btn" type="submit">生成运营内容包</button>
+            </div>
+          </form>
+
+          <section id="result-section" class="output-panel print-area">
+            <div class="output-head no-print">
+              <div><p class="eyebrow">生成结果</p><h2>运营内容包</h2></div>
+              <div class="actions">
+                <button class="secondary-btn" type="button" data-copy-package>复制完整运营包</button>
+                <button class="secondary-btn" type="button" data-download-package>下载为 TXT</button>
+                <button class="secondary-btn" type="button" data-print>打印运营包</button>
+                <button class="secondary-btn" type="button" data-save-history>保存到历史记录</button>
+              </div>
+            </div>
+            <div id="output" class="empty-state">填写信息后生成你的第一份运营内容包。</div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section history-section">
+        <div class="output-head">
+          <div><p class="eyebrow">本地历史</p><h2>最近 5 条生成记录</h2><p id="historyNotice" class="muted"></p></div>
+          <button id="clearHistory" class="danger-btn" type="button">清空历史</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </section>
+
+      <section class="section">
+        <div class="mvp-note">
+          当前版本是静态 MVP，用于验证产品流程和用户需求；生成内容由前端规则模拟，不代表真实大模型效果；后续可接入真实 AI API、账号系统、店铺画像数据库和第三方平台发布能力。
+        </div>
+      </section>
     </main>
 
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div><strong>CampusBiz AI</strong><span>项目定位：静态 AI 产品 MVP · 版本号：v1.0</span></div>
+        <div class="footer-links"><a href="https://zheng1yu1.github.io/campusbiz-ai-assistant/">Demo 链接</a><a href="https://github.com/zheng1yu1/campusbiz-ai-assistant">GitHub 链接</a></div>
+      </div>
+    </footer>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="script.js"></script>
   </body>
