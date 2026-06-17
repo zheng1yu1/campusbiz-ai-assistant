@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>校园商家 AI 运营助手 - 笔试提交版</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="页面导航">
+        <a class="brand" href="#top" aria-label="回到首页">
+          <span class="brand-mark">AI</span>
+          <span>校园商家 AI 运营助手</span>
+        </a>
+        <div class="nav-links">
+          <a href="#demo">产品 Demo</a>
+          <a href="product-plan.html">A4 验证方案</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">小满摘星计划 AI 顶尖人才实习项目 · 笔试 Demo</p>
+          <h1>给校园周边小店的 AI 运营助手</h1>
+          <p class="subtitle">
+            面向奶茶店、饭店、理发店、打印店这类小微商家，解决“不会写内容、没时间更新、重复咨询太多”的问题，
+            把一次活动快速转成可发布的朋友圈、小红书标题、短视频脚本和顾客回复话术。
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn" type="button" data-fill-demo>查看真实示例</button>
+            <a class="secondary-btn" href="product-plan.html">打印验证方案</a>
+          </div>
+        </div>
+
+        <aside class="position-card" aria-label="产品定位">
+          <div>
+            <span>目标用户</span>
+            <strong>校园周边缺少专职运营的小微商家</strong>
+            <p>老板或店长亲自发朋友圈、回私信、做活动宣传。</p>
+          </div>
+          <div>
+            <span>核心痛点</span>
+            <strong>有活动，但说不清、发不稳、回得慢</strong>
+            <p>内容经常临时写，平台表达不自然，重复问题占用大量时间。</p>
+          </div>
+          <div>
+            <span>AI 方案</span>
+            <strong>输入门店活动，一次生成多平台运营包</strong>
+            <p>先用前端 Demo 验证商家是否愿意复制使用，再决定是否接入真实模型。</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="demo" class="section demo-section" aria-labelledby="demo-title">
+        <div class="section-heading">
+          <p class="eyebrow">产品 Demo</p>
+          <h2 id="demo-title">像一个 AI 工作台，而不是普通表单</h2>
+          <p>
+            这版 Demo 模拟真实 AI 产品的交互：先填写门店背景和本次活动，再由系统生成结构化运营包，
+            方便商家直接复制、发布或转给店员执行。
+          </p>
+        </div>
+
+        <div class="workbench">
+          <form class="input-panel" id="generator-form">
+            <div class="panel-title">
+              <p class="eyebrow">输入 brief</p>
+              <h3>门店活动信息</h3>
+            </div>
+
+            <label>
+              门店类型
+              <select id="storeType" name="storeType">
+                <option>奶茶店</option>
+                <option>饭店</option>
+                <option>理发店</option>
+                <option>健身房</option>
+                <option>水果店</option>
+                <option>打印店</option>
+              </select>
+            </label>
+
+            <label>
+              门店名称
+              <input id="storeName" name="storeName" type="text" placeholder="例如：满杯日记" />
+            </label>
+
+            <label>
+              主要客群
+              <select id="audience" name="audience">
+                <option>大学生</option>
+                <option>考研学生</option>
+                <option>宿舍党</option>
+                <option>情侣</option>
+                <option>附近上班族</option>
+                <option>周边居民</option>
+              </select>
+            </label>
+
+            <label>
+              本次活动
+              <textarea id="campaign" name="campaign" rows="5" placeholder="例如：新品桂花乌龙第二杯半价，下午 2 点到 6 点可用"></textarea>
+            </label>
+
+            <div class="field-row">
+              <label>
+                主发平台
+                <select id="platform" name="platform">
+                  <option>小红书</option>
+                  <option>朋友圈</option>
+                  <option>抖音短视频</option>
+                  <option>美团/大众点评</option>
+                  <option>私信回复</option>
+                </select>
+              </label>
+
+              <label>
+                输出风格
+                <select id="tone" name="tone">
+                  <option>自然亲切</option>
+                  <option>清爽专业</option>
+                  <option>校园感强</option>
+                  <option>促销感强</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="primary-btn" type="submit">生成运营包</button>
+              <button class="secondary-btn" type="button" data-fill-demo>填入示例</button>
+            </div>
+          </form>
+
+          <aside class="output-panel" aria-live="polite">
+            <div class="output-head">
+              <div>
+                <p class="eyebrow">AI 输出</p>
+                <h3>多平台运营包</h3>
+              </div>
+              <button class="copy-btn" type="button" data-copy-all>复制全部</button>
+            </div>
+
+            <div class="insight-strip" id="insight-strip">
+              <span>定位：校园半径 1 公里</span>
+              <span>目标：提升到店咨询</span>
+              <span>建议：先发小红书和朋友圈</span>
+            </div>
+
+            <div id="output" class="output-empty">
+              填写左侧信息后，系统会生成标题、发布文案、短视频脚本、顾客回复和执行建议。
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
